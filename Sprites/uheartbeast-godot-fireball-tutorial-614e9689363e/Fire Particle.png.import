@@ -1,0 +1,32 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/Fire Particle.png-f7d4ff5ae884b5bb747c0735f4fe42e5.stex"
+
+[deps]
+
+source_file="res://Sprites/uheartbeast-godot-fireball-tutorial-614e9689363e/Fire Particle.png"
+source_md5="3d605da0c9a3db2bca6048f310e2715e"
+
+dest_files=[ "res://.import/Fire Particle.png-f7d4ff5ae884b5bb747c0735f4fe42e5.stex" ]
+dest_md5="13469d236f83d9fb5c6c641d26f4aed4"
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

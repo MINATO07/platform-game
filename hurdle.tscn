@@ -1,0 +1,37 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://hurdle.gd" type="Script" id=1]
+[ext_resource path="res://DirtTileset.tres" type="TileSet" id=2]
+
+[node name="hurdle" type="Node2D"]
+
+script = ExtResource( 1 )
+_sections_unfolded = [ "Material", "Transform", "Visibility", "Z Index" ]
+
+[node name="TileMap" type="TileMap" parent="." index="0"]
+
+mode = 0
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 32, 32 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 3
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( 65537, 0, 0, 65538, 2, 0, 131073, 5, 0, 131074, 3, 0, 196609, 5, 0, 196610, 3, 0, 262145, 5, 0, 262146, 3, 0, 327681, 5, 0, 327682, 3, 0, 393217, 5, 0, 393218, 3, 0, 458753, 5, 0, 458754, 3, 0, 524289, 5, 0, 524290, 3, 0, 589825, 5, 0, 589826, 3, 0, 655361, 5, 0, 655362, 3, 0 )
+_sections_unfolded = [ "Cell", "Collision", "Material", "Occluder", "Transform", "Visibility", "Z Index" ]
+
+[node name="bottom_pos" type="Position2D" parent="." index="1"]
+
+position = Vector2( 640, 360 )
+_sections_unfolded = [ "Transform" ]
+
+

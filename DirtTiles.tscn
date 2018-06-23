@@ -1,0 +1,267 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Sprites/Sprites/Tiles/JungleDirtTileSet.png" type="Texture" id=1]
+
+[sub_resource type="RectangleShape2D" id=10]
+
+custom_solver_bias = 0.0
+extents = Vector2( 17, 17 )
+
+[node name="DirtTiles" type="Node"]
+
+[node name="tile0" type="Sprite" parent="." index="0"]
+
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 96, 32, 32 )
+_sections_unfolded = [ "Offset", "Region", "Transform" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="tile0" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+_sections_unfolded = [ "Collision", "Transform", "Z Index" ]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="tile0/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -16, -16, -16, -16, 16, -16, 16, 16, -16, 16, -16, -16 )
+one_way_collision = true
+_sections_unfolded = [ "Material", "Transform", "Visibility" ]
+
+[node name="tile1" type="Sprite" parent="." index="1"]
+
+position = Vector2( 64, 0 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 32, 96, 32, 32 )
+_sections_unfolded = [ "Offset", "Region", "Transform" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="tile1" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+_sections_unfolded = [ "Transform" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="tile1/StaticBody2D" index="0"]
+
+shape = SubResource( 10 )
+one_way_collision = true
+
+[node name="tile2" type="Sprite" parent="." index="2"]
+
+position = Vector2( 128, 0 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 64, 96, 32, 32 )
+_sections_unfolded = [ "Offset", "Region" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="tile2" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+_sections_unfolded = [ "Transform" ]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="tile2/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -16, -16, 16, -16, 16, 16, -16, 16 )
+one_way_collision = true
+_sections_unfolded = [ "Transform" ]
+
+[node name="tile3" type="Sprite" parent="." index="3"]
+
+position = Vector2( 128, 64 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 96, 160, 32, 32 )
+_sections_unfolded = [ "Offset", "Region" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="tile3" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+_sections_unfolded = [ "Transform" ]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="tile3/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -16, -16, 16, -16, 16, 16, -16, 16 )
+one_way_collision = true
+_sections_unfolded = [ "Transform" ]
+
+[node name="tile4" type="Sprite" parent="." index="4"]
+
+position = Vector2( 64, 64 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 160, 160, 32, 32 )
+_sections_unfolded = [ "Offset", "Region" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="tile4" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+_sections_unfolded = [ "Transform" ]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="tile4/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -16, -16, 16, -16, 16, 16, -16, 16 )
+one_way_collision = true
+_sections_unfolded = [ "Transform" ]
+
+[node name="tile5" type="Sprite" parent="." index="5"]
+
+position = Vector2( 0, 64 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 64, 160, 32, 32 )
+_sections_unfolded = [ "Offset", "Region", "Transform", "Visibility" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="tile5" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+_sections_unfolded = [ "Collision", "Material", "Pickable", "Transform", "Visibility" ]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="tile5/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -16, -16, 16, -16, 16, 16, -16, 16 )
+one_way_collision = true
+_sections_unfolded = [ "Pause", "Transform" ]
+
+[node name="tile6" type="Sprite" parent="." index="6"]
+
+position = Vector2( 0, 128 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 96, 0, 32, 32 )
+_sections_unfolded = [ "Offset", "Region" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="tile6" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+_sections_unfolded = [ "Transform" ]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="tile6/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( 16, -16, 16, 16, -16, 16, -16, -16 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="tile7" type="Sprite" parent="." index="7"]
+
+position = Vector2( 64, 128 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 128, 0, 32, 32 )
+_sections_unfolded = [ "Offset", "Region" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="tile7" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+_sections_unfolded = [ "Transform" ]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="tile7/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -16, -16, 16, -16, 16, 16, -16, 16 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="tile8" type="Sprite" parent="." index="8"]
+
+position = Vector2( 128, 128 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 160, 0, 32, 32 )
+_sections_unfolded = [ "Offset", "Region" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="tile8" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+_sections_unfolded = [ "Transform" ]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="tile8/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -16, -16, 16, -16, 16, 16, -16, 16 )
+_sections_unfolded = [ "Transform" ]
+
+
