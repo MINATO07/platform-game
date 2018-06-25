@@ -4,7 +4,7 @@ onready var timer=get_node("Timer")
 const fire=preload("res://projectile.tscn")
 const up=Vector2(0,-1)
 const gravity=20
-const speed=200
+var speed=200
 const jump_height=-600
 const acc=25
 
@@ -49,7 +49,15 @@ func _physics_process(delta):
 			restart_timer()
 	pass
 
+func set_speed(var new_speed):
+	speed=new_speed
+	pass
 
 func restart_timer():
 	timer.set_wait_time(0.5)
 	timer.start()
+
+
+func _on_power_timer_timeout():
+	speed=200
+	pass # replace with function body

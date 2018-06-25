@@ -1,6 +1,7 @@
 extends Area2D
 const SPEED=700
 const enemy=preload("res://enemy.tscn")
+onready var root= get_tree().get_root().get_child(0)
 var can_move=false
 var direction=Vector2(0,0)
 func _ready():
@@ -23,9 +24,9 @@ func _set_direction():
 
 
 func _on_projectile_body_entered(body):
+	#print(body.get_parent().get_instance_id())
 	if can_move:
-		if body.get_parent().get_instance_id()==1055:
+		if body.get_parent().get_instance_id()==root.get_instance_id():
 			body.queue_free()
-		print(body.get_parent().get_instance_id())
 		queue_free()
 	pass
