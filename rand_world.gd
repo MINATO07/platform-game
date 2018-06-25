@@ -10,8 +10,7 @@ func _ready():
 	pass
 
 func _process(delta):
-	print(int(get_node("player").global_position.x))
-
+	#print(get_node("player").get_instance_id())
 	if int(get_node("player").global_position.x)%2000>=0 and int(get_node("player").global_position.x)%2000<=5 :
 		if spawn_timer.is_stopped():
 			spawn_timer.start()

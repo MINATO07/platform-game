@@ -1,14 +1,30 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://enemy.gd" type="Script" id=1]
-[ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Demonfly/fly/fly_000.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Demonfly/fly/fly_001.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/Demonfly/fly/fly_002.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/Demonfly/fly/fly_003.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/Demonfly/fly/fly_004.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/Demonfly/fly/fly_005.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/Demonfly/fly/fly_006.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/Demonfly/fly/fly_007.png" type="Texture" id=9]
 
-[sub_resource type="RectangleShape2D" id=1]
+[sub_resource type="SpriteFrames" id=1]
+
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ) ],
+"loop": true,
+"name": "fly",
+"speed": 9.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
 
 custom_solver_bias = 0.0
-extents = Vector2( 32, 32 )
+extents = Vector2( 40, 19 )
 
-[node name="enemy" type="KinematicBody2D" index="0"]
+[node name="enemy" type="KinematicBody2D"]
 
 input_pickable = false
 collision_layer = 3
@@ -20,12 +36,19 @@ __meta__ = {
 "_edit_group_": true
 }
 
-[node name="Sprite" type="Sprite" parent="." index="0"]
+[node name="Sprite" type="AnimatedSprite" parent="." index="0"]
 
-texture = ExtResource( 2 )
+scale = Vector2( 0.1, 0.1 )
+frames = SubResource( 1 )
+animation = "fly"
+frame = 3
+playing = true
+_sections_unfolded = [ "Transform" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
 
-shape = SubResource( 1 )
+position = Vector2( 0, 10 )
+shape = SubResource( 2 )
+_sections_unfolded = [ "Transform" ]
 
 

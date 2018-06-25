@@ -16,7 +16,7 @@ func _process(delta):
 
 func _on_power_up_body_entered(body):
 	#print(body.get_instance_id())
-	if body.get_instance_id()==1061:
+	if body.get_instance_id()==player.get_instance_id():
 		player.set_speed(400)
 		power_timer.start()
 		queue_free()

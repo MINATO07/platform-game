@@ -9,9 +9,14 @@ func _ready():
 	pass
 
 func _process(delta):
+	
 	if start==true:
 		motion.x=player.global_position.x-global_position.x
 		motion.y=player.global_position.y-global_position.y
+		if global_position.x>=player.global_position.x:
+			$Sprite.flip_h=true
+		else :
+			$Sprite.flip_h=false
 		move_and_slide(motion,up)
 	
 
