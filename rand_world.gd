@@ -11,7 +11,8 @@ func _ready():
 
 func _process(delta):
 	#print(get_node("player").get_instance_id())
-	if int(get_node("player").global_position.x)%2000>=0 and int(get_node("player").global_position.x)%2000<=5 :
+	#spawning powerups
+	if int(get_node("player").global_position.x)%2000>=0 and int(get_node("player").global_position.x)%2000<=10 :
 		if spawn_timer.is_stopped():
 			spawn_timer.start()
 			var new_power=powerup.instance()
