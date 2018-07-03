@@ -7,10 +7,10 @@ path="res://.import/fly_007.png-ae866d2e68572e26a4b6a5632e525b37.stex"
 [deps]
 
 source_file="res://Sprites/Demonfly/fly/fly_007.png"
-source_md5="6c7457d787fffb188401019aeaf4f0b6"
+source_md5="7b1404ddd06fb8e1c561c0de656c58d9"
 
 dest_files=[ "res://.import/fly_007.png-ae866d2e68572e26a4b6a5632e525b37.stex" ]
-dest_md5="d493287c7da70489811870ac3d32acf6"
+dest_md5="fe2c98d255357badd94e0086cd1292fe"
 
 [params]
 

@@ -1,9 +1,22 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://power up.gd" type="Script" id=1]
-[ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/items/coin/coin_000.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/items/coin/coin_001.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/items/coin/coin_002.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/items/coin/coin_003.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/items/coin/coin_004.png" type="Texture" id=6]
 
-[sub_resource type="RectangleShape2D" id=1]
+[sub_resource type="SpriteFrames" id=1]
+
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ) ],
+"loop": true,
+"name": "default",
+"speed": 8.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
 
 custom_solver_bias = 0.0
 extents = Vector2( 32, 32 )
@@ -20,16 +33,18 @@ audio_bus_name = "Master"
 script = ExtResource( 1 )
 _sections_unfolded = [ "Pickable" ]
 
-[node name="Sprite" type="Sprite" parent="." index="0"]
+[node name="Sprite" type="AnimatedSprite" parent="." index="0"]
 
-modulate = Color( 0.244141, 0.3125, 0, 1 )
-self_modulate = Color( 0.0104828, 0.894531, 0.397254, 1 )
-texture = ExtResource( 2 )
+scale = Vector2( 0.8, 0.8 )
+frames = SubResource( 1 )
+animation = "default"
+frame = 4
+playing = true
 _sections_unfolded = [ "Animation", "Material", "Offset", "Region", "Transform", "Visibility" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
 
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 
 [connection signal="body_entered" from="." to="." method="_on_power_up_body_entered"]
 

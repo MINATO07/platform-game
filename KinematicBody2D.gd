@@ -4,10 +4,10 @@ onready var timer=get_node("Timer")
 const fire=preload("res://projectile.tscn")
 const up=Vector2(0,-1)
 const gravity=20
-var speed=200
+var speed=300
 var run="run"
 var air_action="jump"
-const jump_height=-600
+const jump_height=-800
 const acc=25
 
 func _ready():
@@ -87,5 +87,5 @@ func restart_timer():
 
 func _on_power_timer_timeout():
 	run="run"
-	speed=200
+	speed=300
 	pass # replace with function body

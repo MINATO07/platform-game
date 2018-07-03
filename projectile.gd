@@ -3,13 +3,14 @@ const SPEED=700
 const enemy=preload("res://enemy.tscn")
 onready var root= get_tree().get_root().get_child(0)
 var can_move=false
-var direction=Vector2(0,0)
 func _ready():
 	pass
 
-func _process(delta):
+func _physics_process(delta):
 	if can_move:
-		global_position=global_position+direction*(SPEED*delta)
+		#global_position=global_position+direction*(SPEED*delta)
+		move_local_x(SPEED*delta)
+		
 	pass
 
 func _on_VisibilityNotifier2D_screen_exited():
@@ -17,10 +18,9 @@ func _on_VisibilityNotifier2D_screen_exited():
 	pass 
 
 func _set_direction():
+	global_rotation=global_rotation+get_angle_to(get_global_mouse_position())
 	can_move=true
-	direction=get_global_mouse_position()-global_position
-	direction=direction/direction.length()
-	
+
 
 
 func _on_projectile_body_entered(body):

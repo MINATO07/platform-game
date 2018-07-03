@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://enemy.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/Demonfly/fly/fly_000.png" type="Texture" id=2]
@@ -9,6 +9,14 @@
 [ext_resource path="res://Sprites/Demonfly/fly/fly_005.png" type="Texture" id=7]
 [ext_resource path="res://Sprites/Demonfly/fly/fly_006.png" type="Texture" id=8]
 [ext_resource path="res://Sprites/Demonfly/fly/fly_007.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/crawl/crawl_000.png" type="Texture" id=10]
+[ext_resource path="res://Sprites/crawl/crawl_001.png" type="Texture" id=11]
+[ext_resource path="res://Sprites/crawl/crawl_002.png" type="Texture" id=12]
+[ext_resource path="res://Sprites/crawl/crawl_003.png" type="Texture" id=13]
+[ext_resource path="res://Sprites/crawl/crawl_004.png" type="Texture" id=14]
+[ext_resource path="res://Sprites/crawl/crawl_005.png" type="Texture" id=15]
+[ext_resource path="res://Sprites/crawl/crawl_006.png" type="Texture" id=16]
+[ext_resource path="res://Sprites/crawl/crawl_007.png" type="Texture" id=17]
 
 [sub_resource type="SpriteFrames" id=1]
 
@@ -17,14 +25,19 @@ animations = [ {
 "loop": true,
 "name": "fly",
 "speed": 9.0
+}, {
+"frames": [ ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ) ],
+"loop": true,
+"name": "crawl",
+"speed": 9.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
 
 custom_solver_bias = 0.0
-extents = Vector2( 40, 19 )
+extents = Vector2( 40, 30 )
 
-[node name="enemy" type="KinematicBody2D"]
+[node name="enemy" type="KinematicBody2D" index="0"]
 
 input_pickable = false
 collision_layer = 3
@@ -38,16 +51,16 @@ __meta__ = {
 
 [node name="Sprite" type="AnimatedSprite" parent="." index="0"]
 
-scale = Vector2( 0.1, 0.1 )
+scale = Vector2( 0.6, 0.6 )
 frames = SubResource( 1 )
 animation = "fly"
-frame = 4
+frame = 2
 playing = true
 _sections_unfolded = [ "Transform" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
 
-position = Vector2( 0, 10 )
+position = Vector2( 0, 4 )
 shape = SubResource( 2 )
 _sections_unfolded = [ "Transform" ]
 

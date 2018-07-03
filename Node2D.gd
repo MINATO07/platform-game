@@ -3,7 +3,7 @@ onready var root= get_tree().get_root().get_child(0).get_node("temp_floor")
 const floor_instance = preload("res://floor.tscn")
 const valley_instance = preload("res://valley.tscn")
 const hurdle_instance = preload("res://hurdle.tscn")
-const width=640
+const width=1280
 
 func _ready():
 	spawnground()

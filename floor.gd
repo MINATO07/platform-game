@@ -6,8 +6,8 @@ func _ready():
 
 	pass
 
-func _process(delta):
-	if get_node("bottom_pos").global_position.x+640 <= player.global_position.x:
+func _physics_process(delta):
+	if get_node("bottom_pos").global_position.x+1280 <= player.global_position.x:
 		queue_free()
 		emit_signal("destroy")
 	pass

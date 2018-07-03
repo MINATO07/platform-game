@@ -10,14 +10,14 @@
 [ext_resource path="res://Sprites/runs/run_005.png" type="Texture" id=8]
 [ext_resource path="res://Sprites/runs/run_006.png" type="Texture" id=9]
 [ext_resource path="res://Sprites/runs/run_007.png" type="Texture" id=10]
-[ext_resource path="res://Sprites/frontflip/ff_006.png" type="Texture" id=11]
-[ext_resource path="res://Sprites/jump1/jump1_001.png" type="Texture" id=12]
-[ext_resource path="res://Sprites/frontflip/ff_000.png" type="Texture" id=13]
-[ext_resource path="res://Sprites/frontflip/ff_001.png" type="Texture" id=14]
-[ext_resource path="res://Sprites/frontflip/ff_002.png" type="Texture" id=15]
-[ext_resource path="res://Sprites/frontflip/ff_003.png" type="Texture" id=16]
-[ext_resource path="res://Sprites/frontflip/ff_004.png" type="Texture" id=17]
-[ext_resource path="res://Sprites/frontflip/ff_005.png" type="Texture" id=18]
+[ext_resource path="res://Sprites/jump1/jump1_001.png" type="Texture" id=11]
+[ext_resource path="res://Sprites/frontflip/ff_000.png" type="Texture" id=12]
+[ext_resource path="res://Sprites/frontflip/ff_001.png" type="Texture" id=13]
+[ext_resource path="res://Sprites/frontflip/ff_002.png" type="Texture" id=14]
+[ext_resource path="res://Sprites/frontflip/ff_003.png" type="Texture" id=15]
+[ext_resource path="res://Sprites/frontflip/ff_004.png" type="Texture" id=16]
+[ext_resource path="res://Sprites/frontflip/ff_005.png" type="Texture" id=17]
+[ext_resource path="res://Sprites/frontflip/ff_006.png" type="Texture" id=18]
 [ext_resource path="res://Sprites/jump1/jump1_003.png" type="Texture" id=19]
 [ext_resource path="res://Sprites/Sprites/Tiles/Sky.png" type="Texture" id=20]
 
@@ -34,24 +34,24 @@ animations = [ {
 "name": "run",
 "speed": 10.0
 }, {
+"frames": [ ExtResource( 11 ) ],
+"loop": true,
+"name": "jump",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ) ],
+"loop": false,
+"name": "front_flip",
+"speed": 11.0
+}, {
 "frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ) ],
 "loop": true,
 "name": "fast run",
 "speed": 20.0
 }, {
-"frames": [ ExtResource( 11 ) ],
+"frames": [ ExtResource( 18 ) ],
 "loop": false,
 "name": "front_flip_end",
-"speed": 11.0
-}, {
-"frames": [ ExtResource( 12 ) ],
-"loop": true,
-"name": "jump",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ) ],
-"loop": false,
-"name": "front_flip",
 "speed": 11.0
 }, {
 "frames": [ ExtResource( 19 ) ],
@@ -75,7 +75,7 @@ __meta__ = {
 [node name="Sprite" type="AnimatedSprite" parent="." index="0"]
 
 position = Vector2( 0, 10 )
-scale = Vector2( 0.06, 0.06 )
+scale = Vector2( 0.1, 0.1 )
 frames = SubResource( 1 )
 animation = "idle"
 playing = true
@@ -85,7 +85,7 @@ _sections_unfolded = [ "Material", "Transform", "Visibility" ]
 
 position = Vector2( 1, 4 )
 build_mode = 0
-polygon = PoolVector2Array( -10.5366, 28.0827, 4.74762, 28.0827, 11.5992, 10.4268, 11.5992, -21.9862, -14.7529, -21.9862, -14.7529, 8.05515 )
+polygon = PoolVector2Array( -15.4671, 48.1957, 15.8701, 48.1957, 24.4796, 5.96646, 14.3162, -39.5919, -18.788, -39.8771, -26.8342, 2.70844 )
 _sections_unfolded = [ "Material", "Transform", "Visibility", "Z Index" ]
 
 [node name="camera" type="Camera2D" parent="." index="2"]
@@ -134,11 +134,12 @@ _sections_unfolded = [ "Scroll" ]
 
 motion_scale = Vector2( 0.5, 0.5 )
 motion_offset = Vector2( 0, 0 )
-motion_mirroring = Vector2( 640, 640 )
-_sections_unfolded = [ "Motion" ]
+motion_mirroring = Vector2( 1280, 1280 )
+_sections_unfolded = [ "Motion", "Transform", "Visibility" ]
 
 [node name="Sky" type="Sprite" parent="ParallaxBackground/ParallaxLayer" index="0"]
 
+scale = Vector2( 2, 2 )
 texture = ExtResource( 20 )
 centered = false
 _sections_unfolded = [ "Offset", "Transform" ]
