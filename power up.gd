@@ -21,3 +21,8 @@ func _on_power_up_body_entered(body):
 		power_timer.start()
 		queue_free()
 	pass # replace with function body
+
+
+func _on_VisibilityNotifier2D_screen_exited():
+	queue_free()
+	pass # replace with function body

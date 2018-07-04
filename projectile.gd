@@ -1,12 +1,12 @@
 extends Area2D
-const SPEED=700
+const SPEED=1000
 const enemy=preload("res://enemy.tscn")
 onready var root= get_tree().get_root().get_child(0)
 var can_move=false
 func _ready():
 	pass
 
-func _physics_process(delta):
+func _process(delta):
 	if can_move:
 		#global_position=global_position+direction*(SPEED*delta)
 		move_local_x(SPEED*delta)

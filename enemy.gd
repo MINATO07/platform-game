@@ -32,6 +32,8 @@ func _physics_process(delta):
 				$Sprite.flip_h=false
 			move_and_slide(motion,up)
 			$Sprite.play("crawl")
+			if global_position.y>=1400:
+				queue_free()
 	
 
 func _set_start():

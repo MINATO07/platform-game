@@ -21,7 +21,7 @@ animations = [ {
 custom_solver_bias = 0.0
 extents = Vector2( 32, 32 )
 
-[node name="power up" type="Area2D"]
+[node name="power up" type="Area2D" index="0"]
 
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
@@ -46,6 +46,12 @@ _sections_unfolded = [ "Animation", "Material", "Offset", "Region", "Transform",
 
 shape = SubResource( 2 )
 
+[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="." index="2"]
+
+rect = Rect2( -10, -10, 20, 20 )
+
 [connection signal="body_entered" from="." to="." method="_on_power_up_body_entered"]
+
+[connection signal="screen_exited" from="VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_exited"]
 
 
