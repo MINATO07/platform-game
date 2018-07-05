@@ -34,7 +34,12 @@ func _physics_process(delta):
 			$Sprite.play("crawl")
 			if global_position.y>=1400:
 				queue_free()
-	
+		
+		#enemy collision
+		if  get_slide_count()!=0:
+			var collide_info=get_slide_collision(0)
+			if collide_info!=null and collide_info.collider_id==player.get_instance_id() :
+				player.decrease_health()
 
 func _set_start():
 	if random<5:

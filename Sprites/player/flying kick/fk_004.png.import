@@ -1,0 +1,32 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/fk_004.png-5678877187e1b5d863bef4ae3d9ee40d.stex"
+
+[deps]
+
+source_file="res://Sprites/player/flying kick/fk_004.png"
+source_md5="f59b899eff6072f2d0cab79c9e916cc9"
+
+dest_files=[ "res://.import/fk_004.png-5678877187e1b5d863bef4ae3d9ee40d.stex" ]
+dest_md5="f0f311b976ff176a55e5be3f2a587c81"
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0
