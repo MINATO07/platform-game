@@ -37,7 +37,7 @@ animations = [ {
 "speed": 9.0
 } ]
 
-[node name="enemy" type="KinematicBody2D"]
+[node name="enemy" type="KinematicBody2D" index="0"]
 
 input_pickable = false
 collision_layer = 3
@@ -60,7 +60,6 @@ _sections_unfolded = [ "Transform" ]
 scale = Vector2( 0.6, 0.6 )
 frames = SubResource( 2 )
 animation = "crawl"
-frame = 4
 playing = true
 _sections_unfolded = [ "Transform" ]
 

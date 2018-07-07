@@ -17,6 +17,9 @@ position = Vector2( 64, 128 )
 
 [node name="temp_floor" type="Node2D" parent="." index="2"]
 
+z_index = -1
+_sections_unfolded = [ "Z Index" ]
+
 [node name="Timer" type="Timer" parent="." index="3"]
 
 process_mode = 1

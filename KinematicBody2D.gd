@@ -84,9 +84,14 @@ func _physics_process(delta):
 					if(friction==true):
 						motion.x=lerp(motion.x,0,0.03)
 		else:
-			$Sprite.play(current_attack)
-			motion.x=200
-			motion.y=-80
+			#$Sprite.play(current_attack)
+			if !$Player_Anime.is_playing():
+				$Player_Anime.play("sword")
+			if $Sprite.flip_h==false:
+				motion.x=400
+			else:
+				motion.x=-400
+			#motion.y=-80
 		if Input.is_action_pressed("left_click"):
 			if timer.is_stopped():
 				var new_fire=fire.instance()
