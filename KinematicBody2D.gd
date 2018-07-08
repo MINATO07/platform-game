@@ -40,7 +40,9 @@ func _physics_process(delta):
 				if Input.is_action_pressed("kick"):
 					current_attack="kick"
 					attack_timer.start()
-					
+				elif Input.is_action_pressed("sword"):
+					current_attack="sword"
+					attack_timer.start()
 				if(Input.is_action_pressed("ui_right")):
 					if(motion.x<=speed):
 						motion.x+=acc
@@ -84,14 +86,24 @@ func _physics_process(delta):
 					if(friction==true):
 						motion.x=lerp(motion.x,0,0.03)
 		else:
-			#$Sprite.play(current_attack)
-			if !$Player_Anime.is_playing():
-				$Player_Anime.play("sword")
-			if $Sprite.flip_h==false:
-				motion.x=400
-			else:
-				motion.x=-400
-			#motion.y=-80
+			if current_attack=="sword":
+				if !$Player_Anime.is_playing():
+					if $Sprite.flip_h==false:
+						$Player_Anime.play("sword")
+					else:
+						$Player_Anime.play("sword_back")
+				if $Sprite.flip_h==false:
+					motion.x=400
+				else:
+					motion.x=-400
+			elif current_attack=="kick":
+				if !$Player_Anime.is_playing():
+					$Player_Anime.play("kick")
+				if $Sprite.flip_h==false:
+					motion.x=400
+				else:
+					motion.x=-400
+				motion.y=-80
 		if Input.is_action_pressed("left_click"):
 			if timer.is_stopped():
 				var new_fire=fire.instance()

@@ -1,22 +1,22 @@
 [gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://enemy.gd" type="Script" id=1]
-[ext_resource path="res://Sprites/devil/crawl/crawl_000.png" type="Texture" id=2]
-[ext_resource path="res://Sprites/devil/crawl/crawl_001.png" type="Texture" id=3]
-[ext_resource path="res://Sprites/devil/crawl/crawl_002.png" type="Texture" id=4]
-[ext_resource path="res://Sprites/devil/crawl/crawl_003.png" type="Texture" id=5]
-[ext_resource path="res://Sprites/devil/crawl/crawl_004.png" type="Texture" id=6]
-[ext_resource path="res://Sprites/devil/crawl/crawl_005.png" type="Texture" id=7]
-[ext_resource path="res://Sprites/devil/crawl/crawl_006.png" type="Texture" id=8]
-[ext_resource path="res://Sprites/devil/crawl/crawl_007.png" type="Texture" id=9]
-[ext_resource path="res://Sprites/devil/Demonfly/fly/fly_000.png" type="Texture" id=10]
-[ext_resource path="res://Sprites/devil/Demonfly/fly/fly_001.png" type="Texture" id=11]
-[ext_resource path="res://Sprites/devil/Demonfly/fly/fly_002.png" type="Texture" id=12]
-[ext_resource path="res://Sprites/devil/Demonfly/fly/fly_003.png" type="Texture" id=13]
-[ext_resource path="res://Sprites/devil/Demonfly/fly/fly_004.png" type="Texture" id=14]
-[ext_resource path="res://Sprites/devil/Demonfly/fly/fly_005.png" type="Texture" id=15]
-[ext_resource path="res://Sprites/devil/Demonfly/fly/fly_006.png" type="Texture" id=16]
-[ext_resource path="res://Sprites/devil/Demonfly/fly/fly_007.png" type="Texture" id=17]
+[ext_resource path="res://Sprites/devil/Demonfly/fly/fly_000.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/devil/Demonfly/fly/fly_001.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/devil/Demonfly/fly/fly_002.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/devil/Demonfly/fly/fly_003.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/devil/Demonfly/fly/fly_004.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/devil/Demonfly/fly/fly_005.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/devil/Demonfly/fly/fly_006.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/devil/Demonfly/fly/fly_007.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/devil/crawl/crawl_000.png" type="Texture" id=10]
+[ext_resource path="res://Sprites/devil/crawl/crawl_001.png" type="Texture" id=11]
+[ext_resource path="res://Sprites/devil/crawl/crawl_002.png" type="Texture" id=12]
+[ext_resource path="res://Sprites/devil/crawl/crawl_003.png" type="Texture" id=13]
+[ext_resource path="res://Sprites/devil/crawl/crawl_004.png" type="Texture" id=14]
+[ext_resource path="res://Sprites/devil/crawl/crawl_005.png" type="Texture" id=15]
+[ext_resource path="res://Sprites/devil/crawl/crawl_006.png" type="Texture" id=16]
+[ext_resource path="res://Sprites/devil/crawl/crawl_007.png" type="Texture" id=17]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -28,12 +28,12 @@ extents = Vector2( 40, 26 )
 animations = [ {
 "frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ) ],
 "loop": true,
-"name": "crawl",
+"name": "fly",
 "speed": 9.0
 }, {
 "frames": [ ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ) ],
 "loop": true,
-"name": "fly",
+"name": "crawl",
 "speed": 9.0
 } ]
 
@@ -60,6 +60,7 @@ _sections_unfolded = [ "Transform" ]
 scale = Vector2( 0.6, 0.6 )
 frames = SubResource( 2 )
 animation = "crawl"
+frame = 7
 playing = true
 _sections_unfolded = [ "Transform" ]
 
