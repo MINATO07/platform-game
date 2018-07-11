@@ -23,7 +23,7 @@ func _physics_process(delta):
 			move_and_slide(motion,up)
 			$Sprite.play("fly")
 		else:
-			motion.x=player.global_position.x-global_position.x
+			motion.x=(player.global_position.x-global_position.x)/2
 			if !is_on_floor():
 				motion.y=motion.y+10
 			if global_position.x>=player.global_position.x:

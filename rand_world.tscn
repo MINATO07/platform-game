@@ -20,10 +20,10 @@ position = Vector2( 64, 128 )
 z_index = -1
 _sections_unfolded = [ "Z Index" ]
 
-[node name="Timer" type="Timer" parent="." index="3"]
+[node name="enemy_spawn_timer" type="Timer" parent="." index="3"]
 
 process_mode = 1
-wait_time = 10.0
+wait_time = 5.0
 one_shot = false
 autostart = true
 
@@ -41,7 +41,7 @@ wait_time = 5.0
 one_shot = true
 autostart = false
 
-[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="timeout" from="enemy_spawn_timer" to="." method="_on_Timer_timeout"]
 
 [connection signal="timeout" from="power_timer" to="player" method="_on_power_timer_timeout"]
 

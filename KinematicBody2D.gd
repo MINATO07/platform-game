@@ -2,6 +2,8 @@ extends KinematicBody2D
 var motion=Vector2()
 onready var timer=get_node("shooting_timer")
 onready var attack_timer=get_node("attack_timer")
+const mountain_bg=preload("res://mountain_bg.tscn")
+const forest_bg=preload("res://forest_bg.tscn")
 const fire=preload("res://projectile.tscn")
 const up=Vector2(0,-1)
 const gravity=20
@@ -12,6 +14,8 @@ var dead=false
 var air_action="jump"
 var shape=PoolVector2Array()
 var current_attack="kick"
+var bg=ParallaxBackground
+var bg_flip=true
 const jump_height=-800
 const acc=25
 
@@ -21,6 +25,8 @@ func _ready():
 	shape.append(Vector2(30,6))
 	shape.append(Vector2(30,25))
 	shape.append(Vector2(-30,25))
+	bg=mountain_bg.instance()
+	add_child(bg)
 
 func _physics_process(delta):
 	var friction=false
@@ -136,3 +142,16 @@ func _on_power_timer_timeout():
 func decrease_health():
 	health=health-5
 	pass
+
+
+func _on_bg_timer_timeout():
+	if bg_flip==true:
+		bg.queue_free()
+		bg=forest_bg.instance()
+		bg_flip=false
+	else:
+		bg.queue_free()
+		bg=mountain_bg.instance()
+		bg_flip=true
+	add_child(bg)
+	pass # replace with function body
