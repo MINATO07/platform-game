@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Sprites/items/weapons/Bazooka.png" type="Texture" id=1]
+[ext_resource path="res://Bazooka.gd" type="Script" id=2]
+
+[node name="Bazooka" type="Sprite"]
+
+rotation = 1.5708
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 1 )
+offset = Vector2( 0, -120 )
+script = ExtResource( 2 )
+_sections_unfolded = [ "Offset", "Transform" ]
+
+[node name="Position2D" type="Position2D" parent="." index="0"]
+
+position = Vector2( 0.222056, -136.039 )
+scale = Vector2( 2, 2 )
+_sections_unfolded = [ "Transform" ]
+__meta__ = {
+"_edit_lock_": true
+}
+
+

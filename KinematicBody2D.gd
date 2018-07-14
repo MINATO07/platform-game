@@ -2,6 +2,7 @@ extends KinematicBody2D
 var motion=Vector2()
 onready var timer=get_node("shooting_timer")
 onready var attack_timer=get_node("attack_timer")
+onready var gun_spawntime=get_node("gun_spawntime")
 const mountain_bg=preload("res://mountain_bg.tscn")
 const forest_bg=preload("res://forest_bg.tscn")
 const fire=preload("res://projectile.tscn")
@@ -111,10 +112,13 @@ func _physics_process(delta):
 					motion.x=-400
 				motion.y=-80
 		if Input.is_action_pressed("left_click"):
+			$Bazooka.visible=true
+			gun_spawntime.wait_time=3
+			gun_spawntime.start()
 			if timer.is_stopped():
 				var new_fire=fire.instance()
 				get_parent().add_child(new_fire)
-				new_fire.global_position=get_node("Position2D").global_position
+				new_fire.global_position=get_node("Bazooka").get_node("Position2D").global_position
 				new_fire._set_direction()
 				restart_timer()
 	motion=move_and_slide(motion,up)
@@ -154,4 +158,9 @@ func _on_bg_timer_timeout():
 		bg=mountain_bg.instance()
 		bg_flip=true
 	add_child(bg)
+	pass # replace with function body
+
+
+func _on_gun_spawntime_timeout():
+	$Bazooka.visible=false
 	pass # replace with function body
