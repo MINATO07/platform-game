@@ -62,7 +62,6 @@ self_modulate = Color( 1, 0, 0, 1 )
 scale = Vector2( 0.6, 0.6 )
 frames = SubResource( 2 )
 animation = "crawl"
-frame = 5
 playing = true
 _sections_unfolded = [ "Material", "Transform", "Visibility" ]
 

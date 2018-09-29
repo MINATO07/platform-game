@@ -40,6 +40,7 @@ func _physics_process(delta):
 			var collide_info=get_slide_collision(0)
 			if collide_info!=null and collide_info.collider_id==player.get_instance_id() :
 				if player.get_node("Player_Anime").get_current_animation()=="sword" or player.get_node("Player_Anime").get_current_animation()=="sword_back" or player.get_node("Player_Anime").get_current_animation()=="kick":
+					score_update()
 					queue_free()
 				player.decrease_health()
 
@@ -47,3 +48,7 @@ func _set_start():
 	if random<5:
 		global_position.y=base
 	start=true
+
+func score_update():
+	player.score+=10
+	player.get_node("score_label").text=str(player.score)

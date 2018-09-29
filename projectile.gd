@@ -27,6 +27,7 @@ func _on_projectile_body_entered(body):
 	#print(body.get_parent().get_instance_id())
 	if can_move:
 		if body.get_parent().get_instance_id()==root.get_instance_id():
+			body.score_update()
 			body.queue_free()
 		queue_free()
 	pass

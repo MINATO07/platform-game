@@ -1,5 +1,6 @@
 extends KinematicBody2D
 var motion=Vector2()
+var score=0
 onready var timer=get_node("shooting_timer")
 onready var attack_timer=get_node("attack_timer")
 onready var gun_spawntime=get_node("gun_spawntime")
