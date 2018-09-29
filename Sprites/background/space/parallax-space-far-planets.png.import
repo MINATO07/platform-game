@@ -7,10 +7,7 @@ path="res://.import/parallax-space-far-planets.png-ae0a582b9f9ac9acd7842be8d3593
 [deps]
 
 source_file="res://Sprites/background/space/parallax-space-far-planets.png"
-source_md5="1b0d2acd623da4c7f265c91d164041e8"
-
 dest_files=[ "res://.import/parallax-space-far-planets.png-ae0a582b9f9ac9acd7842be8d3593748.stex" ]
-dest_md5="357700dd368596dc92542754d7aa54c2"
 
 [params]
 
