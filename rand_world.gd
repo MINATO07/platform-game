@@ -28,7 +28,7 @@ func _physics_process(delta):
 func _on_Timer_timeout():
 	var enemy_instance=enemy.instance()
 	get_node("player").score+=1
-	get_node("player").get_node("score_label").text=str(get_node("player").score)
+	get_node("ui").get_node("score_label").text=str(get_node("player").score)
 	add_child(enemy_instance)
 	enemy_instance.global_position.x=(get_node("player").global_position.x)+1000
 	enemy_instance.global_position.y=(get_node("player").global_position.y)-700

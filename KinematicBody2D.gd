@@ -4,6 +4,7 @@ var score=0
 onready var timer=get_node("shooting_timer")
 onready var attack_timer=get_node("attack_timer")
 onready var gun_spawntime=get_node("gun_spawntime")
+onready var ui= get_tree().get_root().get_child(0).get_node("ui")
 const mountain_bg=preload("res://mountain_bg.tscn")
 const forest_bg=preload("res://forest_bg.tscn")
 const fire=preload("res://projectile.tscn")
@@ -156,6 +157,7 @@ func _on_power_timer_timeout():
 
 func decrease_health():
 	health=health-5
+	ui.get_node("health_bar/bar").value=health
 	pass
 
 

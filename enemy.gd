@@ -1,5 +1,6 @@
 extends KinematicBody2D
 onready var player= get_tree().get_root().get_child(0).get_node("player")
+onready var ui= get_tree().get_root().get_child(0).get_node("ui")
 var motion=Vector2()
 const up=Vector2(0,-1)
 var start=false
@@ -51,4 +52,4 @@ func _set_start():
 
 func score_update():
 	player.score+=10
-	player.get_node("score_label").text=str(player.score)
+	ui.get_node("score_label").text=str(player.score)
