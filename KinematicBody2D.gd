@@ -6,6 +6,7 @@ onready var gun_spawntime=get_node("gun_spawntime")
 const mountain_bg=preload("res://mountain_bg.tscn")
 const forest_bg=preload("res://forest_bg.tscn")
 const fire=preload("res://projectile.tscn")
+const space_bg=preload("res://space_bg.tscn")
 const up=Vector2(0,-1)
 const gravity=20
 var health=100
@@ -26,7 +27,7 @@ func _ready():
 	shape.append(Vector2(30,6))
 	shape.append(Vector2(30,25))
 	shape.append(Vector2(-30,25))
-	bg=mountain_bg.instance()
+	bg=space_bg.instance()
 	add_child(bg)
 
 func _physics_process(delta):

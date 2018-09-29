@@ -1,0 +1,134 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Sprites/background/space/parallax-space-backgound.png" type="Texture" id=1]
+[ext_resource path="res://Sprites/background/space/parallax-space-stars.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/background/space/parallax-space-far-planets.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/background/space/parallax-space-ring-planet.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/background/space/parallax-space-big-planet.png" type="Texture" id=5]
+
+[node name="forest_bg" type="ParallaxBackground"]
+
+layer = -1
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+scroll_offset = Vector2( 0, 0 )
+scroll_base_offset = Vector2( 0, 0 )
+scroll_base_scale = Vector2( 1, 1 )
+scroll_limit_begin = Vector2( 0, 0 )
+scroll_limit_end = Vector2( 0, 0 )
+scroll_ignore_camera_zoom = false
+_sections_unfolded = [ "Scroll" ]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="." index="0"]
+
+motion_scale = Vector2( 0.1, 0 )
+motion_offset = Vector2( 0, 0 )
+motion_mirroring = Vector2( 2720, 0 )
+_sections_unfolded = [ "Motion", "Transform" ]
+
+[node name="parallax-forest-back-trees" type="Sprite" parent="ParallaxLayer" index="0"]
+
+scale = Vector2( 5, 5 )
+z_index = -4
+texture = ExtResource( 1 )
+_sections_unfolded = [ "Transform", "Z Index" ]
+
+[node name="parallax-forest-back-trees2" type="Sprite" parent="ParallaxLayer" index="1"]
+
+position = Vector2( 1360, 0 )
+scale = Vector2( 5, 5 )
+z_index = -4
+texture = ExtResource( 1 )
+_sections_unfolded = [ "Transform", "Z Index" ]
+
+[node name="ParallaxLayer5" type="ParallaxLayer" parent="." index="1"]
+
+motion_scale = Vector2( 0.08, 0 )
+motion_offset = Vector2( 0, 0 )
+motion_mirroring = Vector2( 2720, 0 )
+_sections_unfolded = [ "Motion", "Transform" ]
+
+[node name="parallax-forest-back-trees" type="Sprite" parent="ParallaxLayer5" index="0"]
+
+scale = Vector2( 5, 5 )
+z_index = -4
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Transform", "Z Index" ]
+
+[node name="parallax-forest-back-trees2" type="Sprite" parent="ParallaxLayer5" index="1"]
+
+position = Vector2( 1360, 0 )
+scale = Vector2( 5, 5 )
+z_index = -4
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Transform", "Z Index" ]
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="." index="2"]
+
+motion_scale = Vector2( 0.13, 0 )
+motion_offset = Vector2( 0, 0 )
+motion_mirroring = Vector2( 2720, 0 )
+_sections_unfolded = [ "Motion", "Transform" ]
+
+[node name="parallax-forest-lights" type="Sprite" parent="ParallaxLayer2" index="0"]
+
+scale = Vector2( 5, 5 )
+z_index = -3
+texture = ExtResource( 3 )
+_sections_unfolded = [ "Transform", "Z Index" ]
+
+[node name="parallax-forest-lights2" type="Sprite" parent="ParallaxLayer2" index="1"]
+
+position = Vector2( 1360, 0 )
+scale = Vector2( 5, 5 )
+z_index = -3
+texture = ExtResource( 3 )
+_sections_unfolded = [ "Transform", "Z Index" ]
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="." index="3"]
+
+motion_scale = Vector2( 0.14, 0 )
+motion_offset = Vector2( 0, 0 )
+motion_mirroring = Vector2( 2720, 0 )
+_sections_unfolded = [ "Motion", "Transform" ]
+
+[node name="parallax-forest-middle-trees" type="Sprite" parent="ParallaxLayer3" index="0"]
+
+scale = Vector2( 5, 5 )
+z_index = -2
+texture = ExtResource( 4 )
+_sections_unfolded = [ "Offset", "Transform", "Z Index" ]
+
+[node name="parallax-forest-middle-trees2" type="Sprite" parent="ParallaxLayer3" index="1"]
+
+position = Vector2( 1360, 0 )
+scale = Vector2( 5, 5 )
+z_index = -2
+texture = ExtResource( 4 )
+_sections_unfolded = [ "Offset", "Transform", "Z Index" ]
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="." index="4"]
+
+motion_scale = Vector2( 0.19, 0 )
+motion_offset = Vector2( 0, 0 )
+motion_mirroring = Vector2( 2720, 0 )
+_sections_unfolded = [ "Motion", "Transform" ]
+
+[node name="parallax-forest-front-trees" type="Sprite" parent="ParallaxLayer4" index="0"]
+
+scale = Vector2( 5, 5 )
+z_index = -1
+texture = ExtResource( 5 )
+_sections_unfolded = [ "Transform", "Z Index" ]
+
+[node name="parallax-forest-front-trees2" type="Sprite" parent="ParallaxLayer4" index="1"]
+
+position = Vector2( 1360, 0 )
+scale = Vector2( 5, 5 )
+z_index = -1
+texture = ExtResource( 5 )
+_sections_unfolded = [ "Transform", "Z Index" ]
+
+
