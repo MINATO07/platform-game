@@ -7,7 +7,10 @@ path="res://.import/crawl_003.png-50d4121705bbdb9e21ea2b165dbb9c5a.stex"
 [deps]
 
 source_file="res://Sprites/devil/crawl/crawl_003.png"
+source_md5="f85ead3223ecda09c4954f33942d23e5"
+
 dest_files=[ "res://.import/crawl_003.png-50d4121705bbdb9e21ea2b165dbb9c5a.stex" ]
+dest_md5="067c0eb5b80845df1b2741e269f7d122"
 
 [params]
 

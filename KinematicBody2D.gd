@@ -119,6 +119,8 @@ func _physics_process(delta):
 				var new_fire=fire.instance()
 				get_parent().add_child(new_fire)
 				new_fire.global_position=get_node("Bazooka").get_node("Position2D").global_position
+				new_fire.scale.x=1.5
+				new_fire.scale.y=1.5
 				new_fire._set_direction()
 				restart_timer()
 	motion=move_and_slide(motion,up)

@@ -7,7 +7,10 @@ path="res://.import/ff_002.png-9fcaceffcbf0c56bcfbbe6eeee1a11e7.stex"
 [deps]
 
 source_file="res://Sprites/player/frontflip/ff_002.png"
+source_md5="a1e47d1a5f86b55f8ead9e2af71194ff"
+
 dest_files=[ "res://.import/ff_002.png-9fcaceffcbf0c56bcfbbe6eeee1a11e7.stex" ]
+dest_md5="c108a5ab01565c231b72e4d1c86d7098"
 
 [params]
 

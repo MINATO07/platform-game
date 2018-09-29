@@ -7,7 +7,10 @@ path="res://.import/swordatt_001.png-06bb06378174267a9f63b30554e8b74b.stex"
 [deps]
 
 source_file="res://Sprites/player/sword/swordatt_001.png"
+source_md5="e46c4c508361e78d6e4d869f60b79658"
+
 dest_files=[ "res://.import/swordatt_001.png-06bb06378174267a9f63b30554e8b74b.stex" ]
+dest_md5="ed978036ce9a144e3d81405889083ff5"
 
 [params]
 

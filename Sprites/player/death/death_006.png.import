@@ -7,7 +7,10 @@ path="res://.import/death_006.png-5eefdf515be592570c796464c0d5513e.stex"
 [deps]
 
 source_file="res://Sprites/player/death/death_006.png"
+source_md5="5422f14ea91ffbbd7e797c29e02712c9"
+
 dest_files=[ "res://.import/death_006.png-5eefdf515be592570c796464c0d5513e.stex" ]
+dest_md5="b8dc20188e7b8936f0c1182ebe1bfa8b"
 
 [params]
 

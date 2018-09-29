@@ -7,7 +7,10 @@ path="res://.import/fireblast1.png-95fae063792bfd744bfe3f3dc15d0735.stex"
 [deps]
 
 source_file="res://Sprites/effects/fireblast1.png"
+source_md5="13eb4655a17fb90ea0b41d2b27be1de9"
+
 dest_files=[ "res://.import/fireblast1.png-95fae063792bfd744bfe3f3dc15d0735.stex" ]
+dest_md5="0f8d8b1cbb001a446f4b4c96dad4e2aa"
 
 [params]
 

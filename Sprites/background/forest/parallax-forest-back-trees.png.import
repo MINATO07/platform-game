@@ -7,7 +7,10 @@ path="res://.import/parallax-forest-back-trees.png-3b8430d1709552a6b21f18f6d1c99
 [deps]
 
 source_file="res://Sprites/background/forest/parallax-forest-back-trees.png"
+source_md5="742fdebdf6977d4443c673ed6be8ef47"
+
 dest_files=[ "res://.import/parallax-forest-back-trees.png-3b8430d1709552a6b21f18f6d1c99618.stex" ]
+dest_md5="7d9447c6b81943da0484dd346f91287d"
 
 [params]
 

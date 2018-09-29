@@ -7,7 +7,10 @@ path="res://.import/Idle0.png-afda47c9eebabf7d15ed3ab87117a2e0.stex"
 [deps]
 
 source_file="res://Sprites/Sprites/Player/Idle0.png"
+source_md5="246979be4c4097bb08de13c74044a767"
+
 dest_files=[ "res://.import/Idle0.png-afda47c9eebabf7d15ed3ab87117a2e0.stex" ]
+dest_md5="82baeb12e9285df33fe55188237fce53"
 
 [params]
 

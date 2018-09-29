@@ -13,4 +13,8 @@ func _physics_process(delta):
 	
 	global_rotation=global_rotation+get_angle_to(get_global_mouse_position())+deg2rad(90)
 	print(global_rotation)
+	if(global_rotation_degrees<=0):
+		flip_h=true
+	else:
+		flip_h=false
 	pass

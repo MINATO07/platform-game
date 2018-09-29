@@ -7,7 +7,10 @@ path="res://.import/fk_001.png-cf9ef3059648037073c5b1b26a0bd59c.stex"
 [deps]
 
 source_file="res://Sprites/player/flying kick/fk_001.png"
+source_md5="957370cbbf725ede87f4ce1fa3a2b9b3"
+
 dest_files=[ "res://.import/fk_001.png-cf9ef3059648037073c5b1b26a0bd59c.stex" ]
+dest_md5="47ecc0a68a2aef9d65425ac50de208be"
 
 [params]
 
