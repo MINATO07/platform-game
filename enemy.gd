@@ -42,6 +42,13 @@ func _physics_process(delta):
 			if collide_info!=null and collide_info.collider_id==player.get_instance_id() :
 				if player.get_node("Player_Anime").get_current_animation()=="sword" or player.get_node("Player_Anime").get_current_animation()=="sword_back" or player.get_node("Player_Anime").get_current_animation()=="kick":
 					score_update()
+					$blast.visible=true
+					var t = Timer.new()
+					t.set_wait_time(0.5)
+					t.set_one_shot(true)
+					self.add_child(t)
+					t.start()
+					yield(t, "timeout")
 					queue_free()
 				player.decrease_health()
 

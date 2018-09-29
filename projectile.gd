@@ -28,6 +28,14 @@ func _on_projectile_body_entered(body):
 	if can_move:
 		if body.get_parent().get_instance_id()==root.get_instance_id():
 			body.score_update()
+			body.get_node("blast").visible=true
+			can_move=false
+			var t = Timer.new()
+			t.set_wait_time(0.5)
+			t.set_one_shot(true)
+			self.add_child(t)
+			t.start()
+			yield(t, "timeout")
 			body.queue_free()
 		queue_free()
 	pass

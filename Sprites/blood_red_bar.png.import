@@ -7,10 +7,7 @@ path="res://.import/blood_red_bar.png-b6240c895c36be49e4fd53458efb9d4d.stex"
 [deps]
 
 source_file="res://Sprites/blood_red_bar.png"
-source_md5="3508990fe6bbde35d3996a7dc9714223"
-
 dest_files=[ "res://.import/blood_red_bar.png-b6240c895c36be49e4fd53458efb9d4d.stex" ]
-dest_md5="4b6da5e8461f4635968183d906f3acf4"
 
 [params]
 
