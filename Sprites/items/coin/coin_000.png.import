@@ -7,10 +7,7 @@ path="res://.import/coin_000.png-24513f8cd0b38d34f62e3bbe9b5381b1.stex"
 [deps]
 
 source_file="res://Sprites/items/coin/coin_000.png"
-source_md5="bdeef77c46b2acb392cc57958ed321cb"
-
 dest_files=[ "res://.import/coin_000.png-24513f8cd0b38d34f62e3bbe9b5381b1.stex" ]
-dest_md5="607acd81014bdfcfdaa1f551563f18f0"
 
 [params]
 

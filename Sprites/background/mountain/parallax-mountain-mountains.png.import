@@ -7,10 +7,7 @@ path="res://.import/parallax-mountain-mountains.png-6b721550e488bd86cc6ab931be9a
 [deps]
 
 source_file="res://Sprites/background/mountain/parallax-mountain-mountains.png"
-source_md5="2da5aac8deab66c66347a8a4c099af99"
-
 dest_files=[ "res://.import/parallax-mountain-mountains.png-6b721550e488bd86cc6ab931be9a94c4.stex" ]
-dest_md5="a7faf599b2dc71207ca3977a1fb07463"
 
 [params]
 

@@ -7,10 +7,7 @@ path="res://.import/swa_003.png-ab261bc114ddc84ec01d05bb95ea4e15.stex"
 [deps]
 
 source_file="res://Sprites/player/sword_wave/swa_003.png"
-source_md5="94cf06614bc826774ae517cc75ef232e"
-
 dest_files=[ "res://.import/swa_003.png-ab261bc114ddc84ec01d05bb95ea4e15.stex" ]
-dest_md5="8b313e03e4c56f01752d7c3d19471faf"
 
 [params]
 

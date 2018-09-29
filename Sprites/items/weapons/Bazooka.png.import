@@ -7,10 +7,7 @@ path="res://.import/Bazooka.png-4a4973c1b56c5bc8e07b9ec05ad3213d.stex"
 [deps]
 
 source_file="res://Sprites/items/weapons/Bazooka.png"
-source_md5="576353da1ccaba823b67ec8cc7abd24c"
-
 dest_files=[ "res://.import/Bazooka.png-4a4973c1b56c5bc8e07b9ec05ad3213d.stex" ]
-dest_md5="3d0dd0a1f299f366746b923a675ccbdc"
 
 [params]
 

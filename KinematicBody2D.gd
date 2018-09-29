@@ -9,7 +9,7 @@ const fire=preload("res://projectile.tscn")
 const up=Vector2(0,-1)
 const gravity=20
 var health=100
-var speed=300
+var speed=400
 var run="run"
 var dead=false
 var air_action="jump"
@@ -126,6 +126,13 @@ func _physics_process(delta):
 		dead=true
 		$CollisionShape2D.polygon=shape
 		$Sprite.play("death")
+		var t = Timer.new()
+		t.set_wait_time(3)
+		t.set_one_shot(true)
+		self.add_child(t)
+		t.start()
+		yield(t, "timeout")
+		get_tree().change_scene("rand_world.tscn")
 	pass
 
 func set_speed(var new_speed,var new_run):
@@ -140,7 +147,7 @@ func restart_timer():
 
 func _on_power_timer_timeout():
 	run="run"
-	speed=300
+	speed=400
 	pass
 
 func decrease_health():

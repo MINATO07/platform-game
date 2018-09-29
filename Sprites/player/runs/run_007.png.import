@@ -7,10 +7,7 @@ path="res://.import/run_007.png-969d81a2214fe3e771066e72495e55f4.stex"
 [deps]
 
 source_file="res://Sprites/player/runs/run_007.png"
-source_md5="e66c2ec872964d776290ec5cf74b313e"
-
 dest_files=[ "res://.import/run_007.png-969d81a2214fe3e771066e72495e55f4.stex" ]
-dest_md5="4f731cc00c283cff3a64187baa2e4001"
 
 [params]
 
