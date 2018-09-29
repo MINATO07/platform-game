@@ -160,6 +160,11 @@ func decrease_health():
 	ui.get_node("health_bar/bar").value=health
 	pass
 
+func full_health():
+	health=100
+	ui.get_node("health_bar/bar").value=health
+	pass
+
 
 func _on_bg_timer_timeout():
 	if bg_flip==true:

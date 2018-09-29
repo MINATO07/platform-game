@@ -38,7 +38,7 @@ _sections_unfolded = [ "Pickable" ]
 scale = Vector2( 0.8, 0.8 )
 frames = SubResource( 1 )
 animation = "default"
-frame = 4
+frame = 1
 playing = true
 _sections_unfolded = [ "Animation", "Material", "Offset", "Region", "Transform", "Visibility" ]
 
