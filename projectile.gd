@@ -26,7 +26,8 @@ func _set_direction():
 func _on_projectile_body_entered(body):
 	#print(body.get_parent().get_instance_id())
 	if can_move:
-		if body.get_parent().get_instance_id()==root.get_instance_id():
+		if body.get_parent().get_instance_id()==root.get_instance_id() and body.hit==false:
+			body.hit=true
 			body.score_update()
 			body.get_node("blast").visible=true
 			can_move=false
@@ -36,6 +37,8 @@ func _on_projectile_body_entered(body):
 			self.add_child(t)
 			t.start()
 			yield(t, "timeout")
-			body.queue_free()
+			if body!=null:
+				body.queue_free()
+				body=null
 		queue_free()
 	pass

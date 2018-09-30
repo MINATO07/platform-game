@@ -4,7 +4,9 @@ onready var ui= get_tree().get_root().get_child(0).get_node("ui")
 var motion=Vector2()
 const up=Vector2(0,-1)
 var start=false
+var hit=false
 var random
+var can_damage=true
 const base=600
 
 func _ready():
@@ -39,18 +41,21 @@ func _physics_process(delta):
 		#enemy collision
 		if  get_slide_count()!=0:
 			var collide_info=get_slide_collision(0)
-			if collide_info!=null and collide_info.collider_id==player.get_instance_id() :
+			var collide_info1=get_slide_collision(1)
+			if ((collide_info!=null and collide_info.collider_id==player.get_instance_id()) or (collide_info1!=null and collide_info1.collider_id==player.get_instance_id())) :
 				if player.get_node("Player_Anime").get_current_animation()=="sword" or player.get_node("Player_Anime").get_current_animation()=="sword_back" or player.get_node("Player_Anime").get_current_animation()=="kick":
-					score_update()
 					$blast.visible=true
+					can_damage=false
 					var t = Timer.new()
 					t.set_wait_time(0.5)
 					t.set_one_shot(true)
 					self.add_child(t)
 					t.start()
 					yield(t, "timeout")
+					score_update()
 					queue_free()
-				player.decrease_health()
+				if(can_damage):
+					player.decrease_health()
 
 func _set_start():
 	if random<5:

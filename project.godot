@@ -11,8 +11,9 @@ config_version=3
 [application]
 
 config/name="platform game"
-run/main_scene="res://rand_world.tscn"
-config/icon="res://icon.png"
+run/main_scene="res://start_screen.tscn"
+boot_splash/image="res://Sprites/icon.png"
+config/icon="res://Sprites/icon.png"
 
 [display]
 
